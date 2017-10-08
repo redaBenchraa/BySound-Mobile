@@ -1,3 +1,60 @@
-page-home {
+#canvas-image {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../assets/img/ng.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: -1;
 
+}
+ion-header{
+  background-color: #2d2d2d;
+}
+.sounds-container {
+  padding: 25px;
+  z-index: 1;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.sound-item {
+  z-index: 2;
+  width: 110px;
+  height: auto;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+.sound-item img{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+.sound-item img:hover{
+  opacity: 1;
+}
+.copyright{
+  z-index: 1001;
+  color: white;
+}
+.copyright img{
+  margin-top: 5px;
+  padding: 2px;
+  cursor: pointer;
 }

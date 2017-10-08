@@ -7,12 +7,26 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ul class="sounds-container">
+    <li *ngFor="let mood of moods,index as i" class='sound-item' id="{{i}}" >
+      <img src="assets/img/{{mood.name}}.png" (click)="activate(mood)" [style.opacity]=" mood.activated ? '1' : '0.5'">
+      <ion-range min="1" max="100" step="2" [(ngModel)]="mood.volume" (ionChange)="slide(mood)" color="danger" [style.visibility]=" mood.activated ? 'visible' : 'hidden'" ></ion-range>
+    </li>
+  </ul>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <!--
+  <div class="copyright">
+    Made with
+    <span style="color:#D64541;font-size:21px"> ♥ </span>
+    <span style="color:white;font-size:18px"> by Reda Benchraa </span> <br>
+    <img id="facebook"src="img/CP/facebook.png" alt="" />
+    <img id="github"src="img/CP/github.png" alt="" />
+  </div>
+-->
+
+  <canvas id="canvas-image"></canvas>
+
 </ion-content>
+
