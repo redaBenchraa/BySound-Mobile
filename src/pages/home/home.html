@@ -1,17 +1,17 @@
-<ion-header>
+<!--<ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+    <button ion-button menuToggle >
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>BySound</ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header>-->
 
 <ion-content>
 
   <ul class="sounds-container">
     <li *ngFor="let mood of moods,index as i" class='sound-item' id="{{i}}" >
-      <img src="assets/img/{{mood.name}}.png" (click)="activate(mood)" [style.opacity]=" mood.activated ? '1' : '0.5'">
+      <img src="assets/img/{{mood.name}}.png" (tap)="activate(mood)" [style.opacity]=" mood.activated ? '1' : '0.5'">
       <ion-range min="1" max="100" step="2" [(ngModel)]="mood.volume" (ionChange)="slide(mood)" color="danger" [style.visibility]=" mood.activated ? 'visible' : 'hidden'" ></ion-range>
     </li>
   </ul>
